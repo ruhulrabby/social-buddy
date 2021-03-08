@@ -12,7 +12,7 @@ const PostDetail = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setPost(data)) 
-    }, [])
+    }, [id])
 
     useEffect(()=>{
         
@@ -21,7 +21,7 @@ const PostDetail = () => {
         .then(res => res.json())
         .then(data => setComments(data))
 
-    }, [])
+    }, [id])
 
     return (
         <div>
