@@ -5,7 +5,9 @@ import {
 
   Link, Route, Switch
 } from "react-router-dom";
+import About from "./components/About/About";
 import Home from "./components/Home/Home";
+import PostDetail from "./components/Post Detail/PostDetail";
 
 
 function App() {
@@ -16,6 +18,9 @@ function App() {
         <ul>
           <li>
             <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="home">Home 2</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -39,10 +44,13 @@ function App() {
             <Home />
           </Route>
           <Route path="/about">
-            
+            <About/>
           </Route>
-          <Route path="/dashboard">
-            
+          <Route path="/home">
+            <Home/>
+          </Route>
+          <Route path="/post/:id">
+            <PostDetail/>
           </Route>
         </Switch>
       </div>
